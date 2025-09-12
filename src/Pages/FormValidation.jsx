@@ -7,12 +7,12 @@ const FormValidation = () => {
   return (
     <>
       <section className='bg-blue-300 dark:bg-gray-900 flex justify-center items-center min-h-screen px-4'>
-        <form className='bg-red-200 dark:bg-gray-800 rounded-2xl p-6 sm:p-10 w-full max-w-xl'>
+        <form className='bg-[#FFFFFF] dark:bg-gray-800 rounded-2xl p-6 sm:p-10 w-full max-w-xl'>
 
           {/* Heading */}
           <div className='dark:bg-gray-700 text-white flex flex-col justify-center items-center mb-6 rounded-md py-2'>
             <h2 className="text-xl font-popin text-hclr font-bold">Create Account</h2>
-            <h2 className="text-sm">You are Welcome</h2>
+            <h2 className="text-sm text-[#7E7E8F]">You are Welcome</h2>
           </div>
 
           {/* Name */}
