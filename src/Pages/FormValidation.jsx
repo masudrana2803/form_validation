@@ -41,7 +41,7 @@ const [myerror,setMyerror] = useState('')
           {/* Name */}
           <h3 className="text-gray-800 dark:text-gray-200 mb-2">Your name</h3>
           <div className='flex flex-col sm:flex-row gap-4 mb-5'>
-            <div className='{inputClass(field)} '>
+            <div className={inputClass('field')}>
               <input onChange={(e)=>setName(e.target.value)} type="text" placeholder='First name' className='bg-transparent w-full text-black dark:text-white outline-none' />
               <FaRegUser className="text-gray-600 dark:text-white" />
             </div>
