@@ -102,7 +102,7 @@ const handleChange = (e) => {
 
   // Dynamic input styling
   const inputClass = (field) =>
-    `bg-yellow-100 dark:bg-gray-700 border rounded-md flex items-center gap-2 px-3 py-2 w-full ${
+  `bg-yellow-100 dark:bg-gray-700 border rounded-md flex items-center gap-2 px-3 py-2 w-full ${
       errors[field] ? 'border-red-500' : ''
     }`;
 

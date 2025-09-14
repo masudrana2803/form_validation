@@ -21,6 +21,10 @@ const [myerror,setMyerror] = useState('')
 
 
 
+  const inputClass = (field) =>
+    `bg-yellow-100 dark:bg-gray-700 border rounded-md flex items-center gap-2 px-3 py-2 w-full ${
+      myerror[field] ? 'border-red-500' : ''
+    }`;
 
 
   return (
@@ -37,7 +41,7 @@ const [myerror,setMyerror] = useState('')
           {/* Name */}
           <h3 className="text-gray-800 dark:text-gray-200 mb-2">Your name</h3>
           <div className='flex flex-col sm:flex-row gap-4 mb-5'>
-            <div className='bg-yellow-100 dark:bg-gray-700 border rounded-md flex items-center gap-2 px-3 py-2 w-full'>
+            <div className='{inputClass(field)} '>
               <input onChange={(e)=>setName(e.target.value)} type="text" placeholder='First name' className='bg-transparent w-full text-black dark:text-white outline-none' />
               <FaRegUser className="text-gray-600 dark:text-white" />
             </div>
