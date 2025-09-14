@@ -9,7 +9,7 @@ import {
 } from "react-icons/io5";
 import { FcGoogle } from "react-icons/fc";
 
-const FormValidation = () => {
+const Home = () => {
   // Form state
   const [formData, setFormData] = useState({
     firstName: '',
@@ -212,4 +212,4 @@ const handleChange = (e) => {
   );
 };
 
-export default FormValidation;
+export default Home;
