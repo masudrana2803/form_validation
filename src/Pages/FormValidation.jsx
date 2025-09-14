@@ -1,13 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaRegUser } from "react-icons/fa6";
 import { IoMailOutline, IoCallOutline, IoEyeOutline,IoLogoFacebook } from "react-icons/io5";
 import { FcGoogle } from "react-icons/fc";
 
 const FormValidation = () => {
+  const [name,setName] = useState('console.log(e.target.value)')
+console.log(name)
+
+
+
+  const handleChange=(e)=>{
+    e.preventDefault()
+    console.log('data submit hoichhe')
+  }
+
+
+
+
+
+
   return (
     <>
-      <section className='bg-blue-300 dark:bg-gray-900 flex justify-center items-center min-h-screen px-4'>
-        <form className='bg-[#FFFFFF] dark:bg-gray-800 rounded-2xl p-6 sm:p-10 w-full max-w-xl'>
+      <section className='bg-red-300 dark:bg-gray-900 flex justify-center items-center min-h-screen px-4'>
+        <form onSubmit={handleChange} className='bg-[#FFFFFF] dark:bg-gray-800 rounded-2xl p-6 sm:p-10 w-full max-w-xl'>
 
           {/* Heading */}
           <div className='dark:bg-gray-700 text-white flex flex-col justify-center items-center mb-6 rounded-md py-2'>
@@ -19,7 +34,7 @@ const FormValidation = () => {
           <h3 className="text-gray-800 dark:text-gray-200 mb-2">Your name</h3>
           <div className='flex flex-col sm:flex-row gap-4 mb-5'>
             <div className='bg-yellow-100 dark:bg-gray-700 border rounded-md flex items-center gap-2 px-3 py-2 w-full'>
-              <input type="text" placeholder='First name' className='bg-transparent w-full text-black dark:text-white outline-none' />
+              <input onChange={(e)=>{setName}} type="text" placeholder='First name' className='bg-transparent w-full text-black dark:text-white outline-none' />
               <FaRegUser className="text-gray-600 dark:text-white" />
             </div>
             <div className='bg-yellow-100 dark:bg-gray-700 border rounded-md flex items-center gap-2 px-3 py-2 w-full'>
@@ -31,14 +46,14 @@ const FormValidation = () => {
           {/* Email */}
           <h2 className="text-gray-800 dark:text-gray-200 mb-2">E-mail</h2>
           <div className='bg-yellow-100 dark:bg-gray-700 border rounded-md flex items-center gap-2 px-3 py-2 mb-5'>
-            <input type="text" placeholder='Email' className='bg-transparent w-full text-black dark:text-white outline-none' />
+            <input type="email" placeholder='Email' className='bg-transparent w-full text-black dark:text-white outline-none' />
             <IoMailOutline className="text-gray-600 dark:text-white" />
           </div>
 
           {/* Phone */}
           <h2 className="text-gray-800 dark:text-gray-200 mb-2">Phone numbers</h2>
           <div className='bg-yellow-100 dark:bg-gray-700 border rounded-md flex items-center gap-2 px-3 py-2 mb-5'>
-            <input type="text" placeholder='(+01)' className='bg-transparent w-full text-black dark:text-white outline-none' />
+            <input type="number" placeholder='(+01)' className='bg-transparent w-full text-black dark:text-white outline-none' />
             <IoCallOutline className="text-gray-600 dark:text-white" />
           </div>
 
