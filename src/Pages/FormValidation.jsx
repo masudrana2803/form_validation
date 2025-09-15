@@ -8,10 +8,11 @@ const [name,setName]=useState('')
 const [myerror,setMyerror] = useState('')
 
 
-  const handleChange=(e)=>{
+  const handleSubmit=(e)=>{
     e.preventDefault()
-    if(!name) return setMyerror='errorpara'
-    errorpara.innerHTML="Field is required"
+    if(!name.trim()){setMyerror('field is required')
+  } else{
+setMyerror('')
   }
 
 
@@ -26,7 +27,7 @@ const [myerror,setMyerror] = useState('')
   return (
     <>
       <section className='bg-red-300 dark:bg-gray-900 flex justify-center items-center min-h-screen px-4'>
-        <form onSubmit={handleChange} className='bg-[#FFFFFF] dark:bg-gray-800 rounded-2xl p-6 sm:p-10 w-full max-w-xl'>
+        <form onSubmit={handleSubmit} className='bg-[#FFFFFF] dark:bg-gray-800 rounded-2xl p-6 sm:p-10 w-full max-w-xl'>
 
           {/* Heading */}
           <div className='dark:bg-gray-700 text-white flex flex-col justify-center items-center mb-6 rounded-md py-2'>
@@ -41,7 +42,7 @@ const [myerror,setMyerror] = useState('')
               <input onChange={(e)=>setName(e.target.value)} type="text" placeholder='First name' className='bg-transparent w-full text-black dark:text-white outline-none' />
               <FaRegUser className="text-gray-600 dark:text-white" />
             </div>
-            <p className='text-red-400' id='errorpara'></p>
+            {myerror && <p className='text-red-500'>{myerror}</p> }
             <div className='bg-yellow-100 dark:bg-gray-700 border rounded-md flex items-center gap-2 px-3 py-2 w-full'>
               <input type="text" placeholder='Last name' className='bg-transparent w-full text-black dark:text-white outline-none' />
               <FaRegUser className="text-gray-600 dark:text-white" />
