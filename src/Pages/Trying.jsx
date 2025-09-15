@@ -15,6 +15,8 @@ const FormValidation = () => {
     }
   };
 
+// Logic for the useState in field of errors
+
   return (
     <form onSubmit={handleSubmit} className="space-y-2">
       <div className='bg-yellow-100 dark:bg-gray-700 border rounded-md flex items-center gap-2 px-3 py-2 w-full'>

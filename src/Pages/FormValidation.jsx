@@ -6,14 +6,23 @@ import { FcGoogle } from "react-icons/fc";
 const FormValidation = () => {
 const [name,setName]=useState('')
 const [myerror,setMyerror] = useState('')
+const [myerror1,setMyerror1] = useState('')
 
 
-  const handleSubmit=(e)=>{
+  const handleChange=(e)=>{
     e.preventDefault()
     if(!name.trim()){setMyerror('field is required')
   } else{
 setMyerror('')
   }
+}
+  const handleChange=(r)=>{
+    r.preventDefault()
+    if(!name1.trim()){setMyerror('field is required')
+  } else{
+setMyerror('')
+  }
+}
 
 
   console.log(myerror)
@@ -27,7 +36,7 @@ setMyerror('')
   return (
     <>
       <section className='bg-red-300 dark:bg-gray-900 flex justify-center items-center min-h-screen px-4'>
-        <form onSubmit={handleSubmit} className='bg-[#FFFFFF] dark:bg-gray-800 rounded-2xl p-6 sm:p-10 w-full max-w-xl'>
+        <form onSubmit={handleChange} className='bg-[#FFFFFF] dark:bg-gray-800 rounded-2xl p-6 sm:p-10 w-full max-w-xl'>
 
           {/* Heading */}
           <div className='dark:bg-gray-700 text-white flex flex-col justify-center items-center mb-6 rounded-md py-2'>
@@ -38,14 +47,23 @@ setMyerror('')
           {/* Name */}
           <h3 className="text-gray-800 dark:text-gray-200 mb-2">Your name</h3>
           <div className='flex flex-col sm:flex-row gap-4 mb-5'>
+          {/* First Name */}
             <div className='bg-yellow-100 dark:bg-gray-700 border rounded-md flex items-center gap-2 px-3 py-2 w-full'>
-              <input onChange={(e)=>setName(e.target.value)} type="text" placeholder='First name' className='bg-transparent w-full text-black dark:text-white outline-none' />
+              <input onChange={(e)=>{setName(e.target.value); if(myerror) setMyerror('')}} type="text" placeholder='First name' className='bg-transparent w-full text-black dark:text-white outline-none' />
               <FaRegUser className="text-gray-600 dark:text-white" />
             </div>
-            {myerror && <p className='text-red-500'>{myerror}</p> }
+            {/* Last Name */}
             <div className='bg-yellow-100 dark:bg-gray-700 border rounded-md flex items-center gap-2 px-3 py-2 w-full'>
-              <input type="text" placeholder='Last name' className='bg-transparent w-full text-black dark:text-white outline-none' />
+              <input onChange={(r)=>{setName1(r.target.value); if(myerror1) setMyerror1('')}} type="text" placeholder='Last name' className='bg-transparent w-full text-black dark:text-white outline-none' />
               <FaRegUser className="text-gray-600 dark:text-white" />
+            </div>
+          </div>
+          <div className='flex justify-between'>
+            <div>
+            {myerror && <p className='text-blue-500'>{myerror}</p> }
+            </div>
+            <div>
+            {myerror && <p className='text-blue-500'>{myerror}</p> }
             </div>
           </div>
 
