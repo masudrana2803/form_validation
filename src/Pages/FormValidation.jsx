@@ -6,19 +6,11 @@ import { FcGoogle } from "react-icons/fc";
 const FormValidation = () => {
 const [name,setName]=useState('')
 const [myerror,setMyerror] = useState('')
-const [myerror1,setMyerror1] = useState('')
 
 
   const handleChange=(e)=>{
     e.preventDefault()
     if(!name.trim()){setMyerror('field is required')
-  } else{
-setMyerror('')
-  }
-}
-  const handleChange=(r)=>{
-    r.preventDefault()
-    if(!name1.trim()){setMyerror('field is required')
   } else{
 setMyerror('')
   }
@@ -54,7 +46,7 @@ setMyerror('')
             </div>
             {/* Last Name */}
             <div className='bg-yellow-100 dark:bg-gray-700 border rounded-md flex items-center gap-2 px-3 py-2 w-full'>
-              <input onChange={(r)=>{setName1(r.target.value); if(myerror1) setMyerror1('')}} type="text" placeholder='Last name' className='bg-transparent w-full text-black dark:text-white outline-none' />
+              <input type="text" placeholder='Last name' className='bg-transparent w-full text-black dark:text-white outline-none' />
               <FaRegUser className="text-gray-600 dark:text-white" />
             </div>
           </div>
