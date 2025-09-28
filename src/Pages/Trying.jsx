@@ -1,10 +1,43 @@
 import React from 'react'
 import { CiUser,CiMail } from "react-icons/ci";
 import { MdEmail } from 'react-icons/md';
+import { IoCallOutline } from "react-icons/io5";
+
 
 
 
 const Trying = () => {
+
+  const [name,setName]=useState('')
+  const [myerror,setMyerror] = useState('')
+
+
+  const handleChange=(e)=>{
+    e.preventDefault()
+    if(!name) return setMyerror('field is required')
+
+  }
+
+
+  console.log(myerror)
+  console.log(name)
+
+
+
+
+  const inputClass = (field) =>
+    `bg-yellow-100 dark:bg-gray-700 border rounded-md flex items-center gap-2 px-3 py-2 w-full ${
+      myerror[field] ? 'border-red-500' : ''
+    }`;
+
+
+
+
+
+
+
+
+
   return (
     <>
     <section id='form_Validation' className='bg-blue-300 dark:bg-gray-900 flex justify-center items-center h-dvh '>
@@ -28,22 +61,15 @@ const Trying = () => {
             </div>
           </div>
         </div>
-            <p>Enter your email</p>
-            <div className='items-center flex pl-3'>
-              <input type="email" placeholder='Enter your email' className='w-full outline-none y-2'/>
+            <p>Enter your email here</p>
+            <div className='flex items-center border-[#E8EDF2] border pl-3 py-2 rounded-[8px]  '>
+              <input type="email" placeholder='Enter your email' className='w-full outline-none y-2 '/>
               <CiMail/>
             </div>
-            <div className='items-center flex pl-3'>
-              <input type="email" placeholder='Enter your email' className='w-full outline-none y-2'/>
-              <CiMail/>
-            </div>
-            <div className='items-center flex pl-3'>
-              <input type="email" placeholder='Enter your email' className='w-full outline-none y-2'/>
-              <CiMail/>
-            </div>
-            <div className='items-center flex pl-3'>
-              <input type="email" placeholder='Enter your email' className='w-full outline-none y-2'/>
-              <CiMail/>
+            <p>Phone Number</p>
+            <div className='flex items-center border-[#E8EDF2] border pl-3 py-2 rounded-[8px]'>
+              <input type="phone" placeholder='(+880) Enter your phone number ' className='w-full outline-none y-2' />
+              <IoCallOutline/>
             </div>
             <div className='text-center mt-10 bg-green-600 w-25 m-auto p-2 rounded-2xl active:scale-1'>
               <button type="submit">Sign Up</button>
