@@ -33,6 +33,18 @@ const Trying = () => {
               <input type="email" placeholder='Enter your email' className='w-full outline-none y-2'/>
               <CiMail/>
             </div>
+            <div className='items-center flex pl-3'>
+              <input type="email" placeholder='Enter your email' className='w-full outline-none y-2'/>
+              <CiMail/>
+            </div>
+            <div className='items-center flex pl-3'>
+              <input type="email" placeholder='Enter your email' className='w-full outline-none y-2'/>
+              <CiMail/>
+            </div>
+            <div className='items-center flex pl-3'>
+              <input type="email" placeholder='Enter your email' className='w-full outline-none y-2'/>
+              <CiMail/>
+            </div>
 
         
 
