@@ -45,9 +45,9 @@ const Trying = () => {
               <input type="email" placeholder='Enter your email' className='w-full outline-none y-2'/>
               <CiMail/>
             </div>
-
-        
-
+            <div className='text-center mt-10 bg-green-600 w-fit items-center'>
+              <button type="submit">Sign Up</button>
+            </div>
       </div>
       </form>
     </section>
