@@ -111,8 +111,8 @@ const handleChange = (e) => {
       <form onSubmit={handleSubmit} className='bg-[#FFFFFF] dark:bg-gray-800 rounded-2xl p-6 sm:p-10 w-full max-w-xl'>
 
         {/* Heading */}
-        <div className='dark:bg-gray-700 text-white flex flex-col justify-center items-center mb-6 rounded-md py-2'>
-          <h2 className="text-xl font-popin text-hclr font-bold  dark:text-white">Create Account</h2>
+        <div className='dark:bg-gray-700 flex flex-col justify-center items-center mb-6 rounded-md py-2'>
+          <h2 className="text-xl font-popin text-hclr  font-bold ">Create Account</h2>
           <h2 className="text-sm text-[#7E7E8F]">You are Welcome</h2>
         </div>
 
