@@ -33,11 +33,6 @@ const Trying = () => {
 
 
 
-
-
-
-
-
   return (
     <>
     <section id='form_Validation' className='bg-blue-300 dark:bg-gray-900 flex justify-center items-center h-dvh '>
