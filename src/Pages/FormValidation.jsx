@@ -30,7 +30,7 @@ const FormValidation = () => {
             </div>
             <div className='bg-yellow-100 dark:bg-gray-700 border rounded-md flex items-center gap-2 px-3 py-2 w-full'>
               <input type="text" placeholder='Last name' className='bg-transparent w-full text-black dark:text-white outline-none' />
-              <FaRegUser className="text-gray-600 dark:text-white" />
+              <FaRegUser className="text-gray-600 dark:text-blue-500" />
             </div>
           </div>
 

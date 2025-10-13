@@ -1,3 +1,5 @@
+/* Form validation */
+
 import React, { useState } from 'react';
 import { FaRegUser } from "react-icons/fa6";
 import {
