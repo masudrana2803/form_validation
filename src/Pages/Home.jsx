@@ -119,19 +119,33 @@ const handleChange = (e) => {
         </div>
 
         {/* First & Last Name */}
-        <h3 className="text-gray-800 dark:text-gray-200 mb-2">Your name</h3>
-        <div className='flex flex-col sm:flex-row gap-4 mb-1'>
+        <div className='flex justify-between'>
+        <div>
+        <h3 className="text-gray-800 dark:text-gray-200 mb-2">First name</h3>
           <div className={inputClass('firstName')}>
             <input type="text" name="firstName" value={formData.firstName} onChange={handleChange}
               placeholder='First name' className='bg-transparent w-full text-black dark:text-white outline-none' />
             <FaRegUser className="text-gray-600 dark:text-white" />
           </div>
+        </div>
+        <div>
+        <h3 className="text-gray-800 dark:text-gray-200 mb-2">Last name</h3>
+          <div className={inputClass('firstName')}>
+            <input type="text" name="firstName" value={formData.firstName} onChange={handleChange}
+              placeholder='First name' className='bg-transparent w-full text-black dark:text-white outline-none' />
+            <FaRegUser className="text-gray-600 dark:text-white" />
+          </div>
+        </div>
+        </div>
+
+
+        {/* <div className='flex flex-col sm:flex-row gap-4 mb-1'>
           <div className={inputClass('lastName')}>
             <input type="text" name="lastName" value={formData.lastName} onChange={handleChange}
               placeholder='Last name' className='bg-transparent w-full text-black dark:text-white outline-none' />
             <FaRegUser className="text-gray-600 dark:text-white" />
           </div>
-        </div>
+        </div> */}
         {errors.firstName && <p className="text-red-500 text-sm mb-2">{errors.firstName}</p>}
         {errors.lastName && <p className="text-red-500 text-sm mb-4">{errors.lastName}</p>}
 
