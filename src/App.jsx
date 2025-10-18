@@ -6,7 +6,7 @@ import Trying from './Pages/Trying'
 const App = () => {
   return (
     <>
-<Home/> 
+<Trying/> 
     </>
   )
 }

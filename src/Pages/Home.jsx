@@ -13,7 +13,14 @@ import { FcGoogle } from "react-icons/fc";
 
 const Home = () => {
   // Form state
-
+const [formData,setFormData] = useState({
+  firstName:'',
+  lastName:'',
+  email:'',
+  password:'',
+  codfirmPassword:'',
+  terms:true,
+})
   
 /**
 const [formData, setFormData] = useState({

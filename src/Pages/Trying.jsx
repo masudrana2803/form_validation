@@ -1,77 +1,89 @@
 import React from 'react'
-import { CiUser,CiMail } from "react-icons/ci";
+import {
+  IoMailOutline,
+  IoCallOutline,
+  IoEyeOutline,
+  IoEyeOffOutline,
+  IoLogoFacebook
+} from "react-icons/io5";
+import { FaRegUser } from "react-icons/fa6";
 import { MdEmail } from 'react-icons/md';
-import { IoCallOutline } from "react-icons/io5";
-
 
 
 
 const Trying = () => {
-
-  const [name,setName]=useState('')
-  const [myerror,setMyerror] = useState('')
-
-
-  const handleChange=(e)=>{
-    e.preventDefault()
-    if(!name) return setMyerror('field is required')
-
-  }
-
-
-  console.log(myerror)
-  console.log(name)
-
-
-
-
-  const inputClass = (field) =>
-    `bg-yellow-100 dark:bg-gray-700 border rounded-md flex items-center gap-2 px-3 py-2 w-full ${
-      myerror[field] ? 'border-red-500' : ''
-    }`;
-
-
-
-
   return (
     <>
-    <section id='form_Validation' className='bg-blue-300 dark:bg-gray-900 flex justify-center items-center h-dvh '>
-      <form>
+      <section className='min-h-screen flex justify-center items-center bg-blue-500'>
+        <form>
 
-      <div className='bg-white w-[440px] p-10 rounded-2xl'>
-        <div className='text-center mb-6 p-0'>
-        <h1 className='text-[24px] font-bold font-popin text-hclr  '>Create an account</h1>
-        <p className='text-14px font-popin text-[#7E7E8F]'>You are welcome!</p>
-        </div>
-        <div className='Name w-full mb-2'>
-          <p className='text-14px font-popin text-hclr '>Your name</p>
-          <div className='flex justify-between gap-5 w-fit'>
-            <div className='flex items-center border-[#E8EDF2] border pl-3 rounded-[8px]'>
-              <input type="text" placeholder='First name' className='w-full outline-none py-2 ' />
-              <CiUser/>
-            </div>
-            <div className='flex items-center border-[#E8EDF2] border pl-3 rounded-[8px]'>
-              <input type="text" placeholder='Last name' className='w-full outline-none y-2'/>
-              <CiUser/>
-            </div>
+        <div className='h-fit bg-white p-5 rounded-xl'>
+          <div className='w-1/2 text-center mx-auto mb-8'>
+          <h1 className='text-2xl font-bold'>Create an Account</h1>
+          <p>Your are welcome</p>
+          </div>
+
+          <div className='flex gap-4'>
+            {/* First Name */}
+          <div>
+            <p>First Name</p>
+          <label className='flex items-center rounded-xl border-2 border-gray-300 gap-2 px-2 '>
+            <FaRegUser/>
+            <input type="text" placeholder='Enter your First Name' className='p-1 ' />
+          </label>
+          </div>
+
+          {/* Last Name */}
+          <div>
+          <p>Last Name</p>
+          <label className='flex items-center rounded-xl border-2 border-gray-300 gap-2 px-2'>
+            <FaRegUser/>
+            <input type="text" placeholder='Enter your Last Name' className='p-1' />
+          </label>
+          </div>
+          </div>
+
+          {/* Email */}
+          <div>
+          <p>Email</p>
+          <label className='flex items-center rounded-xl border-2 border-gray-300 gap-2 px-2'>
+            <MdEmail/>
+            <input type="text" placeholder='Enter your Email' className='p-1' />
+          </label>
+          </div>
+
+          {/* Password */}
+          <div>
+          <p>Password</p>
+          <label className='flex items-center rounded-xl border-2 border-gray-300 gap-2 px-2'>
+            <MdEmail/>
+            <input type="password" placeholder='Enter your Email' className='p-1 w-full focus-red-500' />
+            <IoEyeOffOutline/>
+            <IoEyeOutline/>
+          </label>
+          </div>
+
+          {/* Confirm Password */}
+          <div>
+          <p>Password</p>
+          <label className='flex items-center rounded-xl border-2 border-gray-300 gap-2 px-2'>
+            <MdEmail/>
+            <input type="password" placeholder='Enter your Email' className='p-1 w-full focus-red-500' />
+            <IoEyeOffOutline/>
+          </label>
+          </div>
+
+          <button className='w-full mt-5 bg-green-400 rounded-2xl p-2'>Sign Up</button>
+          <div className='flex w-1/2 mx-auto gap-3 mt-5'>
+          <p>Already have an account?</p>
+          <button className='font-bold active:scale-95'>LogIn</button>
           </div>
         </div>
-            <p>Enter your email here</p>
-            <div className='flex items-center border-[#E8EDF2] border pl-3 py-2 rounded-[8px]  '>
-              <input type="email" placeholder='Enter your email' className='w-full outline-none y-2 '/>
-              <CiMail/>
-            </div>
-            <p>Phone Number</p>
-            <div className='flex items-center border-[#E8EDF2] border pl-3 py-2 rounded-[8px]'>
-              <input type="phone" placeholder='(+880) Enter your phone number ' className='w-full outline-none y-2' />
-              <IoCallOutline/>
-            </div>
-            <div className='text-center mt-10 bg-green-600 w-25 m-auto p-2 rounded-2xl active:scale-1'>
-              <button type="submit">Sign Up</button>
-            </div>
-      </div>
-      </form>
-    </section>
+        
+        </form>
+        
+      </section>
+
     </>
   )
 }
