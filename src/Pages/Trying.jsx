@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
   IoMailOutline,
   IoCallOutline,
@@ -12,6 +12,19 @@ import { MdEmail } from 'react-icons/md';
 
 
 const Trying = () => {
+  // form State
+  // const [formData, setFormData] = useState({
+  //   firstName:'',
+  //   lastName:'',
+  //   email:'',
+  //   password:'',
+  //   confirmPassword:'',
+  // })
+
+  // Error State
+  const [errors, setErrors] = useState ({})
+
+
   return (
     <>
       <section className='min-h-screen flex justify-center items-center bg-blue-500'>
@@ -52,6 +65,8 @@ const Trying = () => {
           </label>
           </div>
 
+          
+
           {/* Password */}
           <div>
           <p>Password</p>
@@ -73,7 +88,7 @@ const Trying = () => {
           </label>
           </div>
 
-          <button className='w-full mt-5 bg-green-400 rounded-2xl p-2'>Sign Up</button>
+          <button className='w-full mt-5 bg-green-400 rounded-2xl p-2 active:scale-95 '>Sign Up</button>
           <div className='flex w-1/2 mx-auto gap-3 mt-5'>
           <p>Already have an account?</p>
           <button className='font-bold active:scale-95'>LogIn</button>
