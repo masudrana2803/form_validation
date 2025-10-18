@@ -5,11 +5,6 @@ import { FcGoogle } from "react-icons/fc";
 
 const FormValidation = () => {
 
-
-
-
-
-
   return (
     <>
       <section className='bg-red-300 dark:bg-gray-900 flex justify-center items-center min-h-screen px-4'>

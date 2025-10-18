@@ -13,15 +13,19 @@ import { FcGoogle } from "react-icons/fc";
 
 const Home = () => {
   // Form state
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    password: '',
-    confirmPassword: '',
-    terms: true,
-  });
+
+  
+/**
+const [formData, setFormData] = useState({
+  firstName: '',
+  lastName: '',
+  email: '',
+  phone: '',
+  password: '',
+  confirmPassword: '',
+  terms: true,
+});
+ */
 
   // Error state
   const [errors, setErrors] = useState({});
@@ -130,8 +134,8 @@ const handleChange = (e) => {
         </div>
         <div>
         <h3 className="text-gray-800 dark:text-gray-200 mb-2">Last name</h3>
-          <div className={inputClass('firstName')}>
-            <input type="text" name="firstName" value={formData.firstName} onChange={handleChange}
+          <div className={inputClass('lastName')}>
+            <input type="text" name="lastName" value={formData.lastName} onChange={handleChange}
               placeholder='First name' className='bg-transparent w-full text-black dark:text-white outline-none' />
             <FaRegUser className="text-gray-600 dark:text-white" />
           </div>
